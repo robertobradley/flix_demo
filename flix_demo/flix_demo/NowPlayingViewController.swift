@@ -10,6 +10,9 @@ import UIKit
 import AlamofireImage
 
 class NowPlayingViewController: UIViewController,UITableViewDataSource {
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,6 +20,8 @@ class NowPlayingViewController: UIViewController,UITableViewDataSource {
     var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
+        activityIndicator.startAnimating()
+        
         super.viewDidLoad()
         
         refreshControl = UIRefreshControl()
@@ -54,6 +59,7 @@ class NowPlayingViewController: UIViewController,UITableViewDataSource {
             }
         }
         task.resume()
+        
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
@@ -71,8 +77,9 @@ class NowPlayingViewController: UIViewController,UITableViewDataSource {
         let posterURL = URL(string: baseURLString + posterPathString)!
         cell.posterImageView.af_setImage(withURL: posterURL)
         
-        
+        activityIndicator.stopAnimating()
         return cell
+        
     }
     
     
