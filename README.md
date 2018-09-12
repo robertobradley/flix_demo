@@ -40,8 +40,7 @@ Here's a walkthrough of implemented user stories:
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
-
-Describe any challenges encountered while building the app.
+I don't own a mac, so it was difficult to start this project, which caused me to use a lot of time to catch up and learn. 
 
 ## License
 
