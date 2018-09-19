@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SuperheroViewController: UIViewController, UICollectionViewDataSource {
+class SuperheroViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var movies: [[String:Any]] = []
@@ -16,8 +16,20 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = layout.minimumInteritemSpacing
+        
+        let cellsPerLine: CGFloat = 2
+        let interItemSpacingTotal = layout.minimumInteritemSpacing * (cellsPerLine - 1)
+        let width = collectionView.frame.size.width / cellsPerLine - interItemSpacingTotal / cellsPerLine
+        layout.itemSize = CGSize(width: width, height: width * 3 / 2)
+        
+        
         fetchMovies()
-        // Do any additional setup after loading the view.
+        
+        
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count
@@ -35,7 +47,9 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
     }
     func fetchMovies()
     {
-    let url = URL(string:"https://api.themoviedb.org/3/movie/now_playing?api_key=19abbb5538b8ef9816f9f3206294d95f" )!
+    /*let url = URL(string:"https://api.themoviedb.org/3/movie/now_playing?api_key=19abbb5538b8ef9816f9f3206294d95f" )!*/
+    let url = URL(string: "https://api.themoviedb.org/3/movie/10195/similar?api_key=19abbb5538b8ef9816f9f3206294d95f")!
+        
     let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
     let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
     let task = session.dataTask(with: request) { (data, response, error) in
