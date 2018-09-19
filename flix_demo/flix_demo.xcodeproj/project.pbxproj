@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		56E4BAB3D6D13F5EE2DDA585 /* Pods_flix_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF058F75008F0282A29C26D2 /* Pods_flix_demoTests.framework */; };
 		5A187EFC2146E9B900A24805 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A187EFB2146E9B900A24805 /* NowPlayingViewController.swift */; };
+		5A4F56A42151D3B10026699C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F56A32151D3B10026699C /* DetailViewController.swift */; };
 		5A78190F21473F2900582317 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A78190E21473F2900582317 /* MovieCell.swift */; };
 		95D4A3B62140327C00B42220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D4A3B52140327C00B42220 /* AppDelegate.swift */; };
 		95D4A3BB2140327C00B42220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D4A3B92140327C00B42220 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		4D991BAF96B0B32796222FF2 /* Pods_flix_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flix_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5586B5F279C7D46006E6D3DF /* Pods-flix_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flix_demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-flix_demo/Pods-flix_demo.release.xcconfig"; sourceTree = "<group>"; };
 		5A187EFB2146E9B900A24805 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
+		5A4F56A32151D3B10026699C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5A78190E21473F2900582317 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		95D4A3B22140327C00B42220 /* flix_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flix_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D4A3B52140327C00B42220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5A4F56A12151D3370026699C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A187EFB2146E9B900A24805 /* NowPlayingViewController.swift */,
+				5A4F56A32151D3B10026699C /* DetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5A4F56A22151D3550026699C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A78190E21473F2900582317 /* MovieCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		95D4A3A92140327C00B42220 = {
 			isa = PBXGroup;
 			children = (
@@ -139,13 +158,13 @@
 		95D4A3B42140327C00B42220 /* flix_demo */ = {
 			isa = PBXGroup;
 			children = (
-				5A187EFB2146E9B900A24805 /* NowPlayingViewController.swift */,
+				5A4F56A22151D3550026699C /* Views */,
+				5A4F56A12151D3370026699C /* ViewControllers */,
 				95D4A3B52140327C00B42220 /* AppDelegate.swift */,
 				95D4A3B92140327C00B42220 /* Main.storyboard */,
 				95D4A3BC2140328200B42220 /* Assets.xcassets */,
 				95D4A3BE2140328200B42220 /* LaunchScreen.storyboard */,
 				95D4A3C12140328200B42220 /* Info.plist */,
-				5A78190E21473F2900582317 /* MovieCell.swift */,
 			);
 			path = flix_demo;
 			sourceTree = "<group>";
@@ -383,6 +402,7 @@
 				5A187EFC2146E9B900A24805 /* NowPlayingViewController.swift in Sources */,
 				95D4A3B62140327C00B42220 /* AppDelegate.swift in Sources */,
 				5A78190F21473F2900582317 /* MovieCell.swift in Sources */,
+				5A4F56A42151D3B10026699C /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
