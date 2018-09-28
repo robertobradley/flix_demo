@@ -24,8 +24,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var releaseDateLabel: UILabel!
     
-    @IBOutlet weak var overviewLabel: UILabel!
-    
+    @IBOutlet weak var newOverviewLabel: UITextView!
     var movie: [String:Any]?
 
     override func viewDidLoad() {
@@ -34,7 +33,7 @@ class DetailViewController: UIViewController {
         {
             titleLabel.text = movie[MovieKeys.title] as? String
             releaseDateLabel.text = movie[MovieKeys.release] as? String
-            overviewLabel.text = movie["overview"] as? String
+            newOverviewLabel.text = movie["overview"] as? String
             let backdropPathString = movie[MovieKeys.backdropPath] as! String
             let posterPathString = movie[MovieKeys.posterPath] as! String
             let baseURLString = "https://image.tmdb.org/t/p/w500"

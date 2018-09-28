@@ -20,6 +20,8 @@ class NowPlayingViewController: UIViewController,UITableViewDataSource {
     var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 50
         activityIndicator.startAnimating()
         
         super.viewDidLoad()
