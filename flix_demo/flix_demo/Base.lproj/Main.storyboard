@@ -79,11 +79,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YGB-YR-T94">
-                                <rect key="frame" x="189" y="350" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -100,7 +95,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="Gf7-Uk-P0N"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="YGB-YR-T94" id="Tqc-nn-JR1"/>
                         <outlet property="tableView" destination="TsC-Xv-7g9" id="QcT-x4-YSF"/>
                     </connections>
                 </viewController>
